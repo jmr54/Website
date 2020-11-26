@@ -1,0 +1,60 @@
+
+
+/* h1,h2,h3 {
+    color:teal; 
+    text-align: center;
+    font-weight: bold;
+    font-family: serif;
+}
+h1:hover{
+    background-color:pink;
+    color:blue
+    /*this will change color after hovering a text*/
+}
+
+button{
+    color:red;
+    background-color: green
+}
+
+button:active {
+    background-color: black
+    /*will change the color if press*/
+}
+
+.post:nth-of-type(3n) {
+    background-color: orange
+    /*can use this to change something of a certain pattern*/
+}
+
+h2::first-letter {
+    font-size:50px
+    /*This is how you can select stuff and change it how you want.*/
+}
+
+p::first-line {
+    color:purple;
+    font-weight: bold;
+    /* this is how you can change a certain thing via pseudo elements*/
+}
+
+p::selection {
+    background-color: green
+}
+/* same as above */
+
+#div1 {
+    width: 200px;
+    height: 300px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:pink
+}
+
+#div2 {
+    width: 300px;
+    height: 500px;
+    border-width: 5px;
+    border-style: dash;
+    border-color:red
+}
