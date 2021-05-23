@@ -3,47 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
+    <title>John Ro</title>
 
     <!-- styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" type="image.x-icon" href="/Img/favicon.png">
+    <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
   </head>
   <body>
-    <section class="section">
       <div class="title">
-        <h2>Personal Portfolio</h2>
+        <h2>John Ro</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-          aperiam!
+         Welcome to my personal Portfolio
         </p>
-    <div class= "brandon">
-          
-  
-    <div class="carousel-container">
-          <i class="fas fa-arrow-circle-left" id="prevBtn"></i>
-          <i class="fas fa-arrow-circle-right" id="nextBtn"></i>
-      <div class="carousel-slide">
-        <img src="Img/Seattle.jfif" id="lastClone" alt="">
-        <img src="./Img/Chess.jfif">
-        <img src ="./Img/dell.jfif">
-        <img src ="./Img/marvel.jfif">
-        <img src ="./Img/spider.jfif">
-        <img src="./Img/lambo.jfif">
-        <img src="Img/Seattle.jfif">
-        <img src="./Img/Chess.jfif" id="firstClone" alt="">
-      </div>
-    </div> 
+    <div class= "body-container">
+     <!-- Flipping our card-->          
+        <div class="flip-card-container">
+          <div class="flip-card">
+            <div class="flip-card-front"><img class="avatar" src="Img\Chess.jfif"></div>
+            <div class="flip-card-back">
+              </div>
+            </div>
+          </div>
+
+        
         <article class="about">
-          <!-- btn container -->
+          <!-- This is where we store the title of the tabs -->
           <div class="btn-container">
-            <button class="tab-btn active" data-id="biography">Biography</button>
+            <button class="tab-btn active" data-id="biography">About Me</button>
             <button class="tab-btn" data-id="projects">Projects</button>
             <button class="tab-btn" data-id="goals">Goals</button>
           </div>
           <div class="about-content">
-            <!-- single item -->
+            <!-- This is where we place more information about our tabs -->
             <div class="content active" id="biography">
               <h4>history</h4>
               <p>
@@ -56,10 +49,10 @@
                 tacos single-origin coffee art party migas plaid pop-up.
               </p>
             </div>
-            <!-- end of single item -->
-            <!-- single item -->
+            <!-- end of history tab -->
+            <!-- start of projects tab-->
             <div class="content" id="projects">
-              <h4>vision</h4>
+              <h4>visifon</h4>
               <p>
                 Man bun PBR&B keytar copper mug prism, hell of helvetica. Synth
                 crucifix offal deep v hella biodiesel. Church-key listicle
@@ -77,8 +70,8 @@
                 <li>list item</li>
               </ul>
             </div>
-            <!-- end of single item -->
-            <!-- single item -->
+            <!-- end of projects tab -->
+            <!-- start of goals tab -->
             <div class="content" id="goals">
               <h4>goals</h4>
               <p>
@@ -93,12 +86,243 @@
                 banh mi salvia venmo photo booth quinoa chicharrones.
               </p>
             </div>
-            <!-- end of single item -->
+            <!-- end of goal tabs-->
           </div>
         </article>
       </div>
     </div>
-    </section>
+    </div>
+  </div>
+
+<!--Start of my timeline-->
+
+<section class="slideshow">
+  <img src="Img\bg.jpg" id="bg">
+  <img src="Img\moon.png" id="moon">
+  <img src="Img\mountain.png" id="mountain">
+  <img src="Img\road.png" id="road">
+  <h2 id="slideshow-text">Resume</h2>
+</section>
+<h1 class="resume_text">Resume</h1>
+<div class="resume">
+  <div class="resume_left">
+    <div class="resume_profile">
+      <img src="Img\generic-profile-photo-3.jpg" alt="profile_pic">
+    </div>
+    <div class="resume_content">
+      <div class="resume_item resume_info">
+        <div class="title">
+          <p class="bold">John Ro</p>
+          <p class="regular">Inspiring Web Developer</p>
+        </div>
+        <ul>
+          <li>
+            <div class="icon">
+              <i class="fas fa-map-signs"></i>
+            </div>
+            <div class="data">
+              Puyallup, WA <br /> USA
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="data">
+              +253-314-8878
+            </div>
+          </li> 
+          <li>
+            <div class="icon">
+              <i class="fab fa-weebly"></i>
+            </div>
+            <div class="data">
+              www.johnro.com
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="data">
+              <a href="mailto:jmro5991@gmail.com" style="color: whitesmoke">jmro5991@gmail.com</a>
+            </div>
+          </li>
+         
+        </ul>
+      </div>
+      <div class="resume_item resume_skills">
+        <div class="title">
+          <p class="bold">Skills</p>
+        </div>
+        <ul>
+          <li>
+            <div class="skill_name">
+              HTML
+            </div>
+            <div class="skill_image">
+              <i class="fab fa-html5 fa-2x"></i>
+            </div>
+          </li>
+          <li>
+            <div class="skill_name">
+              CSS
+            </div>
+            <div class="skill_image">
+              <i class="fab fa-css3 fa-2x"></i>
+            </div>
+          </li>
+          <li>
+            <div class="skill_name">
+              SASS
+            </div>
+            <div class="skill_image">
+              <i class="fab fa-sass fa-2x"></i>
+          </li>
+          <li>
+            <div class="skill_name">
+              JS
+            </div>
+            <div class="skill_image">
+              <i class="fab fa-js fa-2x"></i>
+            </div>
+          </li>
+          <li>
+            <div class="skill_name" style="text-align: left;">
+              NODE-JS
+            </div>
+            <div class="skill_image">
+              <i class="fab fa-node fa-2x"></i>
+            </div>
+          </li>
+          <li>
+            <div class="skill_name">
+              React
+            </div>
+            <div class="skill_image">
+              <i class="fab fa-react fa-2x"></i>
+            </div>
+          </li>
+          <li>
+          <li>
+            <div class="skill_name" style="text-align: left;">
+              Adobe PS
+            </div>
+            <div class="skill_image">
+              <i class="fab fa-adobe fa-2x"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="resume_item resume_social">
+        <div class="title">
+          <p class="bold">My Profiles</p>
+        </div>
+        <ul>
+          <li>
+            <div class="icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="data">
+              <p class="semi-bold">Github</p>
+              <a href="https://github.com/jmr54" target="_blank"><p>jmr54</p></a>
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="data">
+              <p class="semi-bold">Linkedin</p>
+              <a href ="https://www.linkedin.com/in/john-ro-9625a2212/" target="_blank"><p>John Ro</p></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+ </div>
+ <div class="resume_right">
+   <div class="resume_item resume_about" style="padding-top: 0px;">
+       <div class="title">
+   </div>
+   <div class="resume_item resume_work">
+       <div class="title">
+          <p class="bold">Work Experience</p>
+        </div>
+       <ul>
+           <li>
+               <div class="date">2016 - 2020</div> 
+               <div class="info">
+                    <p class="semi-bold">Medical Scribe</p> 
+                 <p>
+                  • Document physician-patient encounters (HPI, PE, ROS and A&P). <br>
+                  • Pediatric Gastroenterology, Internal Medicine, Radiology and Obstetrics and Gynecologist. </p>
+               </div>
+           </li>
+           <li>
+             <div class="date">2020 - Present</div>
+             <div class="info">
+                    <p class="semi-bold">EGD Technican</p> 
+                 <p>
+                  • Assist physicians and nurses during procedure.<br>
+                  • Sterilize scope equipment and instrumentation.
+                </p>
+               </div>
+           </li>
+       </ul>
+   </div>
+   <div class="resume_item resume_education">
+     <div class="title">
+          <p class="bold">Education</p>
+        </div>
+     <ul>
+           <li>
+               <div class="date">2011-2013</div> 
+               <div class="info">
+                    <p class="semi-bold">Pierce College</p> 
+                 <p>Puyallup WA, Associates Degree</p>
+               </div>
+           </li>
+           <li>
+             <div class="date">2013 - 2016</div>
+             <div class="info">
+                    <p class="semi-bold">University of Washington</p> 
+                 <p>Tacoma WA, Bachelors Degree</p>
+               </div>
+           </li>
+       </ul>
+   </div>
+   <div class="resume-language">
+    <div class="title">
+      <p class="bold">Languages</p>
+      <ul>
+        <li>
+            <p class="semi-bold">English</p> 
+        </li>
+        <ul>
+          <li>
+              <p class="semi-bold">Korean</p> 
+          </li>
+          <li>
+            <p class="semi-bold">American Sign Language</p> 
+        </li>
+    </ul>
+    </div>
+   </div>
+   <div class="resume_item resume_hobby">
+     <div class="title">
+          <p class="bold">Hobby</p>
+        </div>
+      <ul>
+        <li><i class="fas fa-book"></i></li>
+        <li><i class="fas fa-laptop-code"></i></li>
+        <li><i class="fas fa-music"></i></li>
+        <li><i class="fas fa-golf-ball"></i></li>
+     </ul>
+   </div>
+ </div>
+</div>
+
     <!-- javascript -->
     <script src="app.js"></script>
   </body>

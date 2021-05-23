@@ -1,6 +1,7 @@
 
+/*
 
-/* h1,h2,h3 {
+h1,h2,h3 {
     color:teal; 
     text-align: center;
     font-weight: bold;
@@ -58,3 +59,5 @@ p::selection {
     border-style: dash;
     border-color:red
 }
+
+*/
