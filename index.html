@@ -9,26 +9,15 @@
     <link rel="shortcut icon" type="image.x-icon" href="/Img/favicon.png">
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
       <div class="title">
         <h2>John Ro</h2>
-        <p>
-         Welcome to my personal Portfolio
-        </p>
-    <div class= "body-container">
-     <!-- Flipping our card-->          
-        <div class="flip-card-container">
-          <div class="flip-card">
-            <div class="flip-card-front"><img class="avatar" src="Img\Chess.jfif"></div>
-            <div class="flip-card-back">
-              </div>
-            </div>
-          </div>
-
+        <button id="open-button" class="open-button">Resume</button>
         
-        <article class="about">
+          <article class="about">
           <!-- This is where we store the title of the tabs -->
           <div class="btn-container">
             <button class="tab-btn active" data-id="biography">About Me</button>
@@ -64,11 +53,6 @@
                 rights skateboard affogato readymade sustainable deep v
                 live-edge schlitz narwhal.
               </p>
-              <ul>
-                <li>list item</li>
-                <li>list item</li>
-                <li>list item</li>
-              </ul>
             </div>
             <!-- end of projects tab -->
             <!-- start of goals tab -->
@@ -81,29 +65,45 @@
                 everyday carry blog gastropub. Brunch biodiesel sartorial mlkshk
                 swag, mixtape hashtag marfa readymade direct trade man braid
                 cold-pressed roof party. Small batch adaptogen coloring book
-                heirloom. Letterpress food truck hammock literally hell of wolf
-                beard adaptogen everyday carry. Dreamcatcher pitchfork yuccie,
-                banh mi salvia venmo photo booth quinoa chicharrones.
+                heirloom. lorem
               </p>
             </div>
             <!-- end of goal tabs-->
           </div>
         </article>
       </div>
-    </div>
+
+
+<!-- Border of quote--> 
+      <div class= "fancy_border">   
+        <div class ="main_border">
+          <p id="quote_page">
+          </p>
+          <button id="quote_btn">New Quote</div>
+        </div>
+
+
+<!-- Clock -->
+<div class="clock">
+  <div class="outer-clock-face">
+    <div class="marking marking-one"></div>
+    <div class="marking marking-two"></div>
+    <div class="marking marking-three"></div>
+    <div class="marking marking-four"></div>
+    <div class="inner-clock-face">
+      <div class="hand hour-hand"></div>
+      <div class="hand min-hand"></div>
+      <div class="hand second-hand"></div>
     </div>
   </div>
+</div>
 
-<!--Start of my timeline-->
-
-<section class="slideshow">
-  <img src="Img\bg.jpg" id="bg">
-  <img src="Img\moon.png" id="moon">
-  <img src="Img\mountain.png" id="mountain">
-  <img src="Img\road.png" id="road">
-  <h2 id="slideshow-text">Resume</h2>
-</section>
-<h1 class="resume_text">Resume</h1>
+<!-- this is my button modal -->
+ <div class="modal-overlay" id="modal-overlay"></div>
+ <div class="modal" id="modal">
+   <button class="close-button" id="close-button">Close</button>
+   <div class="modal-guts">
+     <!-- This is where my resume start -->
 <div class="resume">
   <div class="resume_left">
     <div class="resume_profile">
@@ -121,23 +121,15 @@
               <i class="fas fa-map-signs"></i>
             </div>
             <div class="data">
-              Puyallup, WA <br /> USA
+              Washington,<br /> USA
             </div>
           </li>
-          <li>
-            <div class="icon">
-              <i class="fas fa-mobile-alt"></i>
-            </div>
-            <div class="data">
-              +253-314-8878
-            </div>
-          </li> 
           <li>
             <div class="icon">
               <i class="fab fa-weebly"></i>
             </div>
             <div class="data">
-              www.johnro.com
+              https://johnro.dev/
             </div>
           </li>
           <li>
@@ -151,13 +143,14 @@
          
         </ul>
       </div>
+      <!-- My skills with logo -->
       <div class="resume_item resume_skills">
         <div class="title">
           <p class="bold">Skills</p>
         </div>
         <ul>
           <li>
-            <div class="skill_name">
+            <div class="skill_name" style="text-align: left;">
               HTML
             </div>
             <div class="skill_image">
@@ -165,7 +158,7 @@
             </div>
           </li>
           <li>
-            <div class="skill_name">
+            <div class="skill_name" style="text-align: left;">
               CSS
             </div>
             <div class="skill_image">
@@ -173,14 +166,14 @@
             </div>
           </li>
           <li>
-            <div class="skill_name">
+            <div class="skill_name" style="text-align: left;">
               SASS
             </div>
             <div class="skill_image">
               <i class="fab fa-sass fa-2x"></i>
           </li>
           <li>
-            <div class="skill_name">
+            <div class="skill_name" style="text-align: left;" >
               JS
             </div>
             <div class="skill_image">
@@ -196,14 +189,13 @@
             </div>
           </li>
           <li>
-            <div class="skill_name">
+            <div class="skill_name" style="text-align: left;">
               React
             </div>
             <div class="skill_image">
               <i class="fab fa-react fa-2x"></i>
             </div>
           </li>
-          <li>
           <li>
             <div class="skill_name" style="text-align: left;">
               Adobe PS
@@ -212,8 +204,25 @@
               <i class="fab fa-adobe fa-2x"></i>
             </div>
           </li>
+          <li>
+            <div class="skill_name" style="text-align: left;">
+              Python
+            </div>
+            <div class="skill_image">
+              <i class="fab fa-python fa-2x"></i>
+            </div>
+          </li>
+          <li>
+            <div class="skill_name" style="text-align: left;">
+              Django
+            </div>
+            <div class="skill_image">
+              <span class="iconify" data-icon="simple-icons:django" data-inline="false" font-size =30px></span>
+            </div>
+          </li>
         </ul>
       </div>
+      <!-- Lower left profiles with github/linkedin -->
       <div class="resume_item resume_social">
         <div class="title">
           <p class="bold">My Profiles</p>
@@ -241,6 +250,7 @@
       </div>
     </div>
  </div>
+ <!-- Start of the next section. "Real resume part" -->
  <div class="resume_right">
    <div class="resume_item resume_about" style="padding-top: 0px;">
        <div class="title">
@@ -280,18 +290,37 @@
                <div class="date">2011-2013</div> 
                <div class="info">
                     <p class="semi-bold">Pierce College</p> 
-                 <p>Puyallup WA, Associates Degree</p>
+                 <p>Associates Degree</p>
                </div>
            </li>
            <li>
              <div class="date">2013 - 2016</div>
              <div class="info">
                     <p class="semi-bold">University of Washington</p> 
-                 <p>Tacoma WA, Bachelors Degree</p>
+                 <p>Bachelors Degree</p>
                </div>
            </li>
        </ul>
    </div>
+   
+   <div class="resume_item resume_hobby">
+     <div class="title">
+          <p class="bold">Hobby</p>
+        </div>
+      <ul>
+        <li><i class="fas fa-book"></i></li>
+        <li><i class="fas fa-laptop-code"></i></li>
+        <li><i class="fas fa-music"></i></li>
+        <li><i class="fas fa-golf-ball"></i></li>
+     </ul>
+       <ul>
+        <li><i class="fas fa-hockey-puck"></i></li>
+        <li><i class="fas fa-football-ball"></i></li>
+        <li><i class="fas fa-chess-king"></i></li>
+        <li><i class="fas fa-passport"></i></li>
+     </ul>
+   </div>
+
    <div class="resume-language">
     <div class="title">
       <p class="bold">Languages</p>
@@ -309,21 +338,20 @@
     </ul>
     </div>
    </div>
-   <div class="resume_item resume_hobby">
-     <div class="title">
-          <p class="bold">Hobby</p>
-        </div>
-      <ul>
-        <li><i class="fas fa-book"></i></li>
-        <li><i class="fas fa-laptop-code"></i></li>
-        <li><i class="fas fa-music"></i></li>
-        <li><i class="fas fa-golf-ball"></i></li>
-     </ul>
+ </div>
+ </div>
+
    </div>
  </div>
-</div>
+ 
+
 
     <!-- javascript -->
     <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </body>
 </html>
+
+

@@ -1,13 +1,15 @@
 const about = document.querySelector(".about");
 const btns = document.querySelectorAll(".tab-btn");
 const articles = document.querySelectorAll(".content");
-const bg = document.getElementById("bg");
-const moon = document.getElementById("moon");
-const mountain = document.getElementById("mountain");
-const road = document.getElementById("road");
-const text = document.getElementById("slideshow-text");
-
-
+var modal = document.querySelector("#modal");
+var modalOverlay = document.querySelector("#modal-overlay");
+var closeButton = document.querySelector("#close-button");
+var openButton = document.querySelector("#open-button");
+let quotes = document.querySelector("#quote_page");
+let quoteButton = document.querySelector('#quote_btn');
+const secondHand = document.querySelector('.second-hand');
+const minsHand = document.querySelector('.min-hand');
+const hourHand = document.querySelector('.hour-hand');
 
 
 // This is our tabs buttons
@@ -28,19 +30,54 @@ about.addEventListener("click", function (e) {
   }
 });
 
-// Our slideshow
-window.addEventListener('scroll', function(){
-  let value = window.scrollY;
+openButton.addEventListener("click", function () {
+  modal.classList.toggle("closed");
+  modalOverlay.classList.toggle("closed");
+});
 
-  bg.style.top = value * 0.5 + "px";
-  moon.style.left = -value * 0.5 + "px";
-  mountain.style.top = -value * 0.15 + "px";
-  road.style.top = value * 0.15 + "px";
-  text.style.top = value * 1.5 + "px";
-})
+closeButton.addEventListener("click", function () {
+  modal.classList.toggle("closed");
+  modalOverlay.classList.toggle("closed");
+});
 
-// Pop up
-function toggle(){
-  let blur = document.getElementById('blur');
-  blur.classList.toggle('active')
+async function updateQuote() {
+  const response = await 
+  fetch("https://api.quotable.io/random")
+  const data = await response.json();
+  if (response.ok){
+    quotes.innerHTML = `${data.content} ~${data.author}`;
+  } else {
+    quotes.innerHTML ="An error occured"
+  }
 }
+updateQuote();
+
+if(quoteButton){
+  quoteButton.addEventListener('click', updateQuote)
+}
+
+// clock
+
+function setDate() {
+  const now = new Date();
+
+  const seconds = now.getSeconds();
+  const secondsDegrees = ((seconds / 60) * 360) + 90;
+  secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+  const mins = now.getMinutes();
+  const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
+  minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+  const hour = now.getHours();
+  const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
+  hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+}
+
+setInterval(setDate, 1000);
+
+setDate();
+
+
+
+  
