@@ -13,97 +13,52 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-      <div class="title">
-        <h2>John Ro</h2>
-        <button id="open-button" class="open-button">Resume</button>
-        
-          <article class="about">
-          <!-- This is where we store the title of the tabs -->
-          <div class="btn-container">
-            <button class="tab-btn active" data-id="biography">About Me</button>
-            <button class="tab-btn" data-id="projects">Projects</button>
-            <button class="tab-btn" data-id="goals">Goals</button>
+<nav class="nav">
+        <button id="open-button" class="open-button">My Resume</button>
+
+          <div id="mainListDiv" class="main_list">
+              <ul class="navlinks">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
           </div>
-          <div class="about-content">
-            <!-- This is where we place more information about our tabs -->
-            <div class="content active" id="biography">
-              <h4>history</h4>
-              <p>
-                I'm baby wolf pickled schlitz try-hard normcore marfa man bun
-                mumblecore vice pop-up XOXO lomo kombucha glossier bicycle
-                rights. Umami kinfolk salvia jean shorts offal venmo. Knausgaard
-                tilde try-hard, woke fixie banjo man bun. Small batch tumeric
-                mustache tbh wayfarers 8-bit shaman chartreuse tacos. Viral
-                direct trade hoodie ugh chambray, craft beer pork belly flannel
-                tacos single-origin coffee art party migas plaid pop-up.
-              </p>
-            </div>
-            <!-- end of history tab -->
-            <!-- start of projects tab-->
-            <div class="content" id="projects">
-              <h4>visifon</h4>
-              <p>
-                Man bun PBR&B keytar copper mug prism, hell of helvetica. Synth
-                crucifix offal deep v hella biodiesel. Church-key listicle
-                polaroid put a bird on it chillwave palo santo enamel pin,
-                tattooed meggings franzen la croix cray. Retro yr aesthetic four
-                loko tbh helvetica air plant, neutra palo santo tofu mumblecore.
-                Hoodie bushwick pour-over jean shorts chartreuse shabby chic.
-                Roof party hammock master cleanse pop-up truffaut, bicycle
-                rights skateboard affogato readymade sustainable deep v
-                live-edge schlitz narwhal.
-              </p>
-            </div>
-            <!-- end of projects tab -->
-            <!-- start of goals tab -->
-            <div class="content" id="goals">
-              <h4>goals</h4>
-              <p>
-                Chambray authentic truffaut, kickstarter brunch taxidermy vape
-                heirloom four dollar toast raclette shoreditch church-key.
-                Poutine etsy tote bag, cred fingerstache leggings cornhole
-                everyday carry blog gastropub. Brunch biodiesel sartorial mlkshk
-                swag, mixtape hashtag marfa readymade direct trade man braid
-                cold-pressed roof party. Small batch adaptogen coloring book
-                heirloom. lorem
-              </p>
-            </div>
-            <!-- end of goal tabs-->
-          </div>
-        </article>
-      </div>
+          <span class="navTrigger">
+              <i></i>
+              <i></i>
+              <i></i>
+          </span>
+</div>
+</nav>
+<div id="heart"></div>
 
-
-<!-- Border of quote--> 
-      <div class= "fancy_border">   
-        <div class ="main_border">
-          <p id="quote_page">
-          </p>
-          <button id="quote_btn">New Quote</div>
-        </div>
-
-
-<!-- Clock -->
-<div class="clock">
-  <div class="outer-clock-face">
-    <div class="marking marking-one"></div>
-    <div class="marking marking-two"></div>
-    <div class="marking marking-three"></div>
-    <div class="marking marking-four"></div>
-    <div class="inner-clock-face">
-      <div class="hand hour-hand"></div>
-      <div class="hand min-hand"></div>
-      <div class="hand second-hand"></div>
+<div class="intro-block">
+        <div class="monitor">
+    <?xml version="1.0" encoding="utf-8"?>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 500 200" style="enable-background:new 0 0 500 200;" xml:space="preserve">
+                        <g>
+                            <polyline class="ekg" points="486.6,113.8 328.2,113.8 310.3,132.3 296,70.7 246.8,127.4 241.6,120.2 233.9,166.4 227,27.6 
+                                213.2,118.3 211.8,112.3 205.1,126.1 198.2,108.5 194.1,124.4 184.5,92.9 174.1,113 4.3,113"/>
+                        </g>
+                        </svg>
+<!-- svg provided by Markus Sjero -->
     </div>
-  </div>
+</div>
+
+<div class="title">
+  
 </div>
 
 <!-- this is my button modal -->
- <div class="modal-overlay" id="modal-overlay"></div>
- <div class="modal" id="modal">
+<div class="modal-overlay" id="modal-overlay"></div>
+<div class="modal" id="modal">
    <button class="close-button" id="close-button">Close</button>
-   <div class="modal-guts">
-     <!-- This is where my resume start -->
+<div class="modal-guts">
+
+
+<!-- This is where my resume start -->
 <div class="resume">
   <div class="resume_left">
     <div class="resume_profile">
@@ -341,8 +296,9 @@
  </div>
  </div>
 
-   </div>
- </div>
+</div>
+</div>
+</div>
  
 
 
@@ -351,7 +307,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-  </body>
+</body>
 </html>
-
 
