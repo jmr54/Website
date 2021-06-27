@@ -9,19 +9,16 @@
     <link rel="shortcut icon" type="image.x-icon" href="/Img/favicon.png">
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
   </head>
   <body>
 <nav class="nav">
         <button id="open-button" class="open-button">My Resume</button>
-
           <div id="mainListDiv" class="main_list">
               <ul class="navlinks">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#about">Portfolio</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#about">About Me</a></li>
+                  <li><a href="#gallary">Gallary</a></li>
               </ul>
           </div>
           <span class="navTrigger">
@@ -30,23 +27,25 @@
               <i></i>
           </span>
 </nav>
-<div class="animate-flicker"><br>Welcome to</br>John Ro's <br>Personal Website</br></div>
-<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-<div id="heart"></div>
-
-<div class="intro-block">
-        <div class="monitor">
-    <?xml version="1.0" encoding="utf-8"?>
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             viewBox="0 0 500 200" style="enable-background:new 0 0 500 200;" xml:space="preserve">
-                        <g>
-                            <polyline class="ekg" points="486.6,113.8 328.2,113.8 310.3,132.3 296,70.7 246.8,127.4 241.6,120.2 233.9,166.4 227,27.6 
-                                213.2,118.3 211.8,112.3 205.1,126.1 198.2,108.5 194.1,124.4 184.5,92.9 174.1,113 4.3,113"/>
-                        </g>
-                        </svg>
-<!-- svg provided by Markus Sjero -->
-    </div>
-</div>
+<section id="home">
+  <div class="animate-flicker"><br>Welcome to</br>John Ro's <br>Personal Website</br></div>
+  <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+  <div id="heart"></div>
+  
+  <div class="intro-block">
+          <div class="monitor">
+      <?xml version="1.0" encoding="utf-8"?>
+                          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                               viewBox="0 0 500 200" style="enable-background:new 0 0 500 200;" xml:space="preserve">
+                          <g>
+                              <polyline class="ekg" points="486.6,113.8 328.2,113.8 310.3,132.3 296,70.7 246.8,127.4 241.6,120.2 233.9,166.4 227,27.6 
+                                  213.2,118.3 211.8,112.3 205.1,126.1 198.2,108.5 194.1,124.4 184.5,92.9 174.1,113 4.3,113"/>
+                          </g>
+                          </svg>
+  <!-- svg provided by Markus Sjero -->
+      </div>
+  </div>
+</section>
 
 
 <!-- this is my button modal -->
@@ -297,14 +296,72 @@
 </div>
 </div>
 </div>
+</div>
  
+<!-- (╯°□°）╯︵ ┻━┻ -->
+
+
+<section id="about">
+ <div class="about-me">
+   <img src="Img/generic-profile-photo-3.jpg" class="about-me-pic">
+   <!-- Photo by https://unsplash.com/@hpzworkz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" Hassan Pasha Unsplash -->
+  
+   <div class="about-me-text">
+     <h1>About me</h1>
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga nostrum temporibus, vitae tempora asperiores illum magni nobis doloribus rerum voluptatibus minus libero dicta delectus reiciendis aliquam non sequi error! Veritatis?     </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, consequatur. Neque sunt perferendis saepe aliquid et deleniti aperiam quas placeat sint soluta animi illum, facere enim odio, consequatur impedit ipsum!
+      </p>
+    </div>
+ </div>
+
+</section>
+
+
+<!-- CodePen Home
+Gallery Viewer Carousel / Tiles
+Chris Rowland -->
+<section id="gallary">
+  <div id="container">
+    <div id="toggleContainer">
+       <label>Carousel</label>
+       <div id="toggle">
+         <div id="outer3">
+            <div id="slider3"></div>
+         </div>
+         <label>Tiles</label>
+      </div>
+    </div>
+    <div id="galleryView">
+      <div id="galleryContainer">
+         <div id="leftView"></div>
+         <button id="navLeft" class="navBtns"><i class="fas fa-arrow-left fa-3x"></i></button>
+         <a id="linkTag">
+            <div id="mainView"></div>
+         </a>
+         <div id="rightView"></div>
+         <button id="navRight" class="navBtns"><i class="fas fa-arrow-right fa-3x"></i></button>
+      </div>
+    </div>
+    <div id="tilesView">
+      <div id="tilesContainer"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
 
 
     <!-- javascript -->
+    <script type='text/javascript' src='config.js'></script>
     <script src="app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
 

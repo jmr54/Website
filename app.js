@@ -5,6 +5,8 @@ const openButton = document.querySelector("#open-button");
 const navTrigger = document.querySelector(".navTrigger");
 const nav = document.querySelector(".nav");
 const mainListDiv = document.querySelector(".mainListDiv");
+const mykey = config.MY_API_KEY;
+
 
 window.onload = function () {
   modal.classList.toggle("closed");
@@ -66,7 +68,114 @@ function showTime() {
 }
 showTime();
 
-// Scroll
-const scroll = new SmoothScroll('.navbar a[href*="#"]', {
-  	speed: 500
- });
+
+
+let newArray = []
+console.log(newArray)
+
+function unsplash() {
+  let url = "https://api.unsplash.com/users/cloudxxxx/photos?client_id=" + mykey; 
+  fetch(url)
+    .then(function(data) {
+      return data.json(); 
+    })
+    .then(function(data){
+      console.log(data)
+      data.forEach(photo=> {
+        newArray.push(photo.urls.raw + "&fit=scale&w=500&h=450");
+        console.log(newArray)
+      })
+    })
+}
+unsplash();
+
+
+// Carousel
+document.getElementById("outer3").addEventListener("click", toggleState3);
+
+function toggleState3() {
+  let galleryView = document.getElementById("galleryView");
+  let tilesView = document.getElementById("tilesView");
+  let outer = document.getElementById("outer3");
+  let slider = document.getElementById("slider3");
+  let tilesContainer = document.getElementById("tilesContainer");
+  
+  if (slider.classList.contains("active")) {
+    slider.classList.remove("active");
+    outer.classList.remove("outerActive");
+    galleryView.style.display = "flex";
+    tilesView.style.display = "none";
+
+    while (tilesContainer.hasChildNodes()) {
+      tilesContainer.removeChild(tilesContainer.firstChild);
+    }
+  } else {
+    slider.classList.add("active");
+    outer.classList.add("outerActive");
+    galleryView.style.display = "none";
+    tilesView.style.display = "flex";
+
+    for (let i = 0; i < newArray.length; i++) {
+      let tileItem = document.createElement("div");
+      tileItem.classList.add("tileItem");
+      tileItem.style.background = "url(" + newArray[i] + ")";
+      tilesContainer.appendChild(tileItem);
+    }
+  }
+}
+
+let mainImg = 0;
+let prevImg = newArray.length - 1;
+let nextImg = 1;
+
+function loadGallery() {
+  let mainView = document.getElementById("mainView");
+  mainView.style.background = "url(" + newArray[mainImg] + ")";
+
+  let leftView = document.getElementById("leftView");
+  leftView.style.background = "url(" + newArray[prevImg] + ")";
+
+  let rightView = document.getElementById("rightView");
+  rightView.style.background = "url(" + newArray[nextImg] + ")";
+
+  let linkTag = document.getElementById("linkTag");
+  linkTag.href = newArray[mainImg];
+}
+
+function scrollRight() {
+  prevImg = mainImg;
+  mainImg = nextImg;
+  if (nextImg >= newArray.length - 1) {
+    nextImg = 0;
+  } else {
+    nextImg++;
+  }
+  loadGallery();
+}
+
+function scrollLeft() {
+  nextImg = mainImg;
+  mainImg = prevImg;
+
+  if (prevImg === 0) {
+    prevImg = newArray.length - 1;
+  } else {
+    prevImg--;
+  }
+  loadGallery();
+}
+
+document.getElementById("navRight").addEventListener("click", scrollRight);
+document.getElementById("navLeft").addEventListener("click", scrollLeft);
+document.getElementById("rightView").addEventListener("click", scrollRight);
+document.getElementById("leftView").addEventListener("click", scrollLeft);
+document.addEventListener("keyup", function (e) {
+  if (e.keyCode === 37) {
+    scrollLeft();
+  } else if (e.keyCode === 39) {
+    scrollRight();
+  }
+});
+
+loadGallery();
+
