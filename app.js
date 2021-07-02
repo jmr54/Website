@@ -5,7 +5,7 @@ const openButton = document.querySelector("#open-button");
 const navTrigger = document.querySelector(".navTrigger");
 const nav = document.querySelector(".nav");
 const mainListDiv = document.querySelector(".mainListDiv");
-const MYAPIKEY = config.MY_API_KEY;
+
 
 window.onload = function () {
   modal.classList.toggle("closed");
