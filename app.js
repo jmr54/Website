@@ -5,8 +5,7 @@ const openButton = document.querySelector("#open-button");
 const navTrigger = document.querySelector(".navTrigger");
 const nav = document.querySelector(".nav");
 const mainListDiv = document.querySelector(".mainListDiv");
-const mykey = config.MY_API_KEY;
-
+const MYAPIKEY = config.MY_API_KEY;
 
 window.onload = function () {
   modal.classList.toggle("closed");
@@ -68,27 +67,22 @@ function showTime() {
 }
 showTime();
 
-
-
-let newArray = []
-console.log(newArray)
-
-function unsplash() {
-  let url = "https://api.unsplash.com/users/cloudxxxx/photos?client_id=" + mykey; 
-  fetch(url)
-    .then(function(data) {
-      return data.json(); 
-    })
-    .then(function(data){
-      console.log(data)
-      data.forEach(photo=> {
-        newArray.push(photo.urls.raw + "&fit=scale&w=500&h=450");
-        console.log(newArray)
-      })
-    })
-}
-unsplash();
-
+let newArray = [
+  "https://picsum.photos/500/450?random=2",
+  "https://picsum.photos/500/450?random=3",
+  "https://picsum.photos/500/450?random=4",
+  "https://picsum.photos/500/450?random=5",
+  "https://picsum.photos/500/450?random=6",
+  "https://picsum.photos/500/450?random=7",
+  "https://picsum.photos/500/450?random=8",
+  "https://picsum.photos/500/450?random=9",
+  "https://picsum.photos/500/450?random=10",
+  "https://picsum.photos/500/450?random=11",
+  "https://picsum.photos/500/450?random=12",
+  "https://picsum.photos/500/450?random=13",
+  "https://picsum.photos/500/450?random=14",
+  "https://picsum.photos/500/450?random=15",
+];
 
 // Carousel
 document.getElementById("outer3").addEventListener("click", toggleState3);
@@ -99,7 +93,7 @@ function toggleState3() {
   let outer = document.getElementById("outer3");
   let slider = document.getElementById("slider3");
   let tilesContainer = document.getElementById("tilesContainer");
-  
+
   if (slider.classList.contains("active")) {
     slider.classList.remove("active");
     outer.classList.remove("outerActive");
@@ -178,4 +172,3 @@ document.addEventListener("keyup", function (e) {
 });
 
 loadGallery();
-

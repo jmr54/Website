@@ -710,7 +710,8 @@ p {
 }
 
 .resume .resume-language .semi-bold{
-  align-items: left;
+  color: #00d704;
+  
 }
 
 /* Button Modal */
@@ -790,10 +791,8 @@ p {
   display: block;
   
   /* Probably need media queries here */
-  width: 1000px;
-  max-width: 100%;
-  
-  height: 1000px;
+  max-width: 95%;
+
   max-height: 100%;
   
   position: fixed;
@@ -845,7 +844,7 @@ p {
 
 
 #about{
-  background-image: url('Img/hassan-pasha-7SjEuEF06Zw-unsplash.jpg');
+  background-image: url('img/jachymmichal-oVWilf8znF8-unsplash.jpg');
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -913,7 +912,7 @@ border-radius: 50%;
 }
 
 #toggleContainer {
-  height: 10vh;
+  height: 23vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -924,7 +923,7 @@ border-radius: 50%;
 #tilesContainer {
   min-height: 90vh;
   width: 100vw;
-  margin-top: 10vh;
+  margin-top: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -970,9 +969,8 @@ border-radius: 50%;
 
 #tilesView {
   min-height: 100vh;
-  width: 100vw;
-  background: rgb(246,210,106);
-  background: linear-gradient(111deg, rgba(246,210,106,1) 0%, rgba(255,159,0,1) 52%, rgba(251,197,100,1) 100%);
+  width: 100%;
+  background: #3f87a6;
   display: none;
   justify-content: center;
   align-items: center;
@@ -980,10 +978,9 @@ border-radius: 50%;
 }
 
 #galleryView {
-  height: 100vh;
-  width: 100vw;
-  background: rgb(246,210,106);
-  background: linear-gradient(111deg, rgba(246,210,106,1) 0%, rgba(255,159,0,1) 52%, rgba(251,197,100,1) 100%);
+  height: 100%;
+  width: 100%;
+  background: #FF7F50;  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1002,7 +999,7 @@ border-radius: 50%;
 #slider3 {
   height: 36px;
   width: 46px;
-  background-color: orange;
+  background-color: #088DA5;
   border-radius: 3px;  
   transition: all 0.5s;
 }
@@ -1112,38 +1109,7 @@ border-radius: 50%;
 /* Mobile setting */
 
 @media screen and (max-width: 450px) {
-  html {
-    background-image: url('Img/—Pngtree—mobile\ phone\ mockup_5865909.png');
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .title {
-    text-align: center;
-    max-width: 300px;
-    margin: auto;
-    padding-top: 3px;
-  }
-  #quote_page{
-    display: none;
-  }
-  #quote_btn{
-    display: none;
-  }
-  .main_border{
-    display: none;
-  }
 
-  p {
-    margin-bottom: 1.25rem;
-    color: var(--clr-grey-5);
-    font-size: 3vw;
-  }
-  
-  .resume {
-    width: auto;
-    height: auto;
-    display: flex;
-  }
 }
 
 
@@ -1156,6 +1122,62 @@ border-radius: 50%;
 }
 
 @media screen and (max-width:768px) {
+  html {
+    background: #00d704;
+  }
+  .title {
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+    padding-top: 3px;
+  }
+
+  p {
+    margin-bottom: 1.25rem;
+    color: var(--clr-grey-5);
+    font-size: 3vw;
+  }
+
+  .clock {
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 1.3rem;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+  
+  }
+  
+  .animate-flicker {
+    width: 22ch;
+    animation: typing 1s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+    }
+
+    
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+  .resume {
+    width: auto;
+    height: auto;
+    display: flex;
+  }
+
   .navTrigger {
       display: block;
   }
