@@ -5,6 +5,8 @@ const openButton = document.querySelector("#open-button");
 const navTrigger = document.querySelector(".navTrigger");
 const nav = document.querySelector(".nav");
 const mainListDiv = document.querySelector(".mainListDiv");
+// let MYAPIKEY = config.MY_API_KEY;
+
 
 
 window.onload = function () {
@@ -67,7 +69,7 @@ function showTime() {
 }
 showTime();
 
-let newArray = [
+ let newArray = [
   "https://picsum.photos/500/450?random=2",
   "https://picsum.photos/500/450?random=3",
   "https://picsum.photos/500/450?random=4",
@@ -83,6 +85,28 @@ let newArray = [
   "https://picsum.photos/500/450?random=14",
   "https://picsum.photos/500/450?random=15",
 ];
+
+
+/*
+let newArray =[];
+
+function unsplash() {
+  let url = "https://api.unsplash.com/users/cloudxxxx/photos?client_id=" + MYAPIKEY; 
+  fetch(url)
+    .then(function(data) {
+      return data.json(); 
+    })
+    .then(function(data){
+      console.log(data)
+      data.forEach(photo=> {
+        newArray.push(photo.urls.raw + "&fit=scale&w=500&h=450");
+        console.log(newArray)
+      })
+    })
+}
+unsplash(); */
+
+
 
 // Carousel
 document.getElementById("outer3").addEventListener("click", toggleState3);
