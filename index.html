@@ -48,6 +48,8 @@
 </section>
 
 
+
+
 <!-- this is my button modal -->
 <div class="modal-overlay" id="modal-overlay"></div>
 <div class="modal" id="modal">
@@ -301,14 +303,14 @@
 <!-- (╯°□°）╯︵ ┻━┻ -->
 
 
-<section id="about">
+<!-- <section id="about">
  <div class="about-me">
    <img src="Img/Profilepic.jpg" class="about-me-pic">
-   <!-- Photo by ᴊᴀᴄʜʏᴍ ᴍɪᴄʜᴀʟ https://unsplash.com/@jachymmichal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText Unsplash -->
+   Photo by ᴊᴀᴄʜʏᴍ ᴍɪᴄʜᴀʟ https://unsplash.com/@jachymmichal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText Unsplash 
     
    <div class="about-me-text">
      <h1>About me</h1>
-     <p>Hello World! My name is John Ro and I'm an aspiring Web Developer looking to join the field. I graduated from University of Washington with a strong background in Psychology and Science. I enjoy working in the field of medicine but I found myself deeply immersed and passionate about programming that I decided to learn more this field. </p>
+     <p>Hello World! My name is John Ro and I'm a software engineer looking to join the field. I graduated from University of Washington with a strong background in Psychology and Science. I enjoy working in the field of medicine but I found myself deeply immersed and passionate about programming that I decided to learn more this field. </p>
      <p>I enjoy many various hobbies that includes many activities. Sport wise, I enjoy American football, ice hockey, golf and football (soccer). I played sports since I was a kid so I know the importance of teamwork and communication.  I also enjoy playing chess, reading and watching movies in my spare time as well. </p>
      <p>Quotes to live by</p>
      <p>“Do more than is required. What is the distance between someone who achieves their goals consistently and those who spend their lives and careers merely following? The extra mile.”
@@ -332,9 +334,65 @@
     </div>
     
  </div>
+<p>I enjoy many various hobbies that includes many activities. Sport wise, I enjoy American football, ice hockey, golf and football (soccer). I played sports since I was a kid so I know the importance of teamwork and communication.  I also enjoy playing chess, reading and watching movies in my spare time as well. </p>
+</section> -->
 
-</section>
 
+<section id="about">
+  <div class="about-me">
+    <img src="Img/Profilepic.jpg" class="about-me-pic">
+
+    <article class="about-me-text">
+    <!-- This is where we store the title of the tabs -->
+    <div class="btn-container">
+      <button class="tab-btn active" data-id="biography">About Me</button>
+      <button class="tab-btn" data-id="projects">Projects</button>
+      <button class="tab-btn" data-id="quotes">Quotes</button>
+    </div>
+    <div class="about-content">
+      <!-- This is where we place more information about our tabs -->
+      <div class="content active" id="biography">
+        <p>Hello World! My name is John Ro and I'm a software engineer looking to join the field. I graduated from University of Washington with a strong background in Psychology and Science. I enjoy working in the field of medicine but I found myself deeply immersed and passionate about programming that I decided to learn more this field. </p>
+        <div class="wrapper">
+          <div class="icon instagram">
+            <div class="tooltip">Email</div>
+            <a href = "mailto: jmro5991@gmail.com"><span><i class="fas fa-envelope-open"></i></span></a>
+          </div>
+          <div class="icon github">
+            <div class="tooltip">Github</div>
+            <a href = "https://github.com/jmr54" target="_blank"><span><i class="fab fa-github"></i></span></a>
+          </div>
+          <div class="icon linkedin">
+            <div class="tooltip">Linkedin</div>
+            <a href = "https://www.linkedin.com/in/john-ro-9625a2212/" target="_blank"><span><i class="fab fa-linkedin"></i></span></a>
+          </div>
+        </div>
+      </div>
+      <!-- end of history tab -->
+      <!-- start of projects tab-->
+      <div class="content" id="projects">
+        <h4>Check them out</h4>
+        <p>
+          <a href="https://andyro.com/" target="_blank">andyro.com</a>
+        </p>
+      </div>
+      <!-- end of projects tab -->
+      <!-- start of goals tab -->
+      <div class="content" id="quotes">
+        <h4>Random Quotes</h4>
+        <div class= "fancy_border">   
+          <div class ="main_border">
+            <p id="quote_page">
+            </p>
+            <button id="quote_btn">Click For A New Quote!</div>
+          </div>
+  
+      </div>
+      <!-- end of goal tabs-->
+    </div>
+  </article>
+</div>
+</div>
 
 <!-- CodePen Home
 Gallery Viewer Carousel / Tiles
@@ -366,7 +424,6 @@ Chris Rowland -->
     </div>
   </div>
 </section>
-
 
 
 

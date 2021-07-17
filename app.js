@@ -5,13 +5,19 @@ const openButton = document.querySelector("#open-button");
 const navTrigger = document.querySelector(".navTrigger");
 const nav = document.querySelector(".nav");
 const mainListDiv = document.querySelector(".mainListDiv");
-// let MYAPIKEY = config.MY_API_KEY;
+const about = document.querySelector(".about-me-text");
+const btns = document.querySelectorAll(".tab-btn");
+const articles = document.querySelectorAll(".content");
+let quotes = document.querySelector("#quote_page");
+let quoteButton = document.querySelector('#quote_btn');
+let ignore = "NMLxKUhiZvvOvN4KygmsmdGbE8foG6dAyu60YbefYag";
 
 
 
 window.onload = function () {
   modal.classList.toggle("closed");
   modalOverlay.classList.toggle("closed");
+  loadGallery();
 };
 
 openButton.addEventListener("click", function () {
@@ -27,8 +33,6 @@ closeButton.addEventListener("click", function () {
 navTrigger.addEventListener("click", function (e) {
   nav.classList.toggle("nav");
   // These two below may not be needed.
-  mainListDiv.classList.toggleClass("show_list");
-  mainListDiv.fadeIn();
 });
 
 window.addEventListener("scroll", () => {
@@ -36,6 +40,25 @@ window.addEventListener("scroll", () => {
     nav.classList.add("affix");
   } else {
     nav.classList.remove("affix");
+  }
+});
+
+
+// This is our tabs buttons
+about.addEventListener("click", function (e) {
+  const id = e.target.dataset.id;
+  if (id) {
+    // remove selected from other buttons
+    btns.forEach(function (btn) {
+      btn.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    // hide other articles
+    articles.forEach(function (article) {
+      article.classList.remove("active");
+    });
+    const element = document.getElementById(id);
+    element.classList.add("active");
   }
 });
 
@@ -69,29 +92,29 @@ function showTime() {
 }
 showTime();
 
- let newArray = [
-  "https://picsum.photos/500/450?random=2",
-  "https://picsum.photos/500/450?random=3",
-  "https://picsum.photos/500/450?random=4",
-  "https://picsum.photos/500/450?random=5",
-  "https://picsum.photos/500/450?random=6",
-  "https://picsum.photos/500/450?random=7",
-  "https://picsum.photos/500/450?random=8",
-  "https://picsum.photos/500/450?random=9",
-  "https://picsum.photos/500/450?random=10",
-  "https://picsum.photos/500/450?random=11",
-  "https://picsum.photos/500/450?random=12",
-  "https://picsum.photos/500/450?random=13",
-  "https://picsum.photos/500/450?random=14",
-  "https://picsum.photos/500/450?random=15",
-];
+//  let newArray = [
+//   "https://picsum.photos/500/450?random=2",
+//   "https://picsum.photos/500/450?random=3",
+//   "https://picsum.photos/500/450?random=4",
+//   "https://picsum.photos/500/450?random=5",
+//   "https://picsum.photos/500/450?random=6",
+//   "https://picsum.photos/500/450?random=7",
+//   "https://picsum.photos/500/450?random=8",
+//   "https://picsum.photos/500/450?random=9",
+//   "https://picsum.photos/500/450?random=10",
+//   "https://picsum.photos/500/450?random=11",
+//   "https://picsum.photos/500/450?random=12",
+//   "https://picsum.photos/500/450?random=13",
+//   "https://picsum.photos/500/450?random=14",
+//   "https://picsum.photos/500/450?random=15",
+// ];
 
 
-/*
+
 let newArray =[];
 
 function unsplash() {
-  let url = "https://api.unsplash.com/users/cloudxxxx/photos?client_id=" + MYAPIKEY; 
+  let url = "https://api.unsplash.com/users/cloudxxxx/photos?client_id=" + ignore; 
   fetch(url)
     .then(function(data) {
       return data.json(); 
@@ -100,11 +123,10 @@ function unsplash() {
       console.log(data)
       data.forEach(photo=> {
         newArray.push(photo.urls.raw + "&fit=scale&w=500&h=450");
-        console.log(newArray)
       })
     })
 }
-unsplash(); */
+unsplash(); 
 
 
 
@@ -141,6 +163,7 @@ function toggleState3() {
     }
   }
 }
+
 
 let mainImg = 0;
 let prevImg = newArray.length - 1;
@@ -187,12 +210,24 @@ document.getElementById("navRight").addEventListener("click", scrollRight);
 document.getElementById("navLeft").addEventListener("click", scrollLeft);
 document.getElementById("rightView").addEventListener("click", scrollRight);
 document.getElementById("leftView").addEventListener("click", scrollLeft);
-document.addEventListener("keyup", function (e) {
-  if (e.keyCode === 37) {
-    scrollLeft();
-  } else if (e.keyCode === 39) {
-    scrollRight();
-  }
-});
 
-loadGallery();
+
+
+
+
+async function updateQuote() {
+  const response = await 
+  fetch("https://api.quotable.io/random")
+  const data = await response.json();
+  if (response.ok){
+    quotes.innerHTML = `${data.content} ~${data.author}`;
+  } else {
+    quotes.innerHTML ="An error occured"
+  }
+}
+updateQuote();
+
+if(quoteButton){
+  quoteButton.addEventListener('click', updateQuote)
+}
+
