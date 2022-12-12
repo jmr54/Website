@@ -9,425 +9,147 @@
     <link rel="shortcut icon" type="image.x-icon" href="/Img/favicon.png">
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <!--https://icon-sets.iconify.design/ where i got my icons-->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script> 
   </head>
-  <body>
-<nav class="nav">
-        <button id="open-button" class="open-button">My Resume</button>
-          <div id="mainListDiv" class="main_list">
-              <ul class="navlinks">
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#about">About Me</a></li>
-                  <li><a href="#gallary">Gallary</a></li>
-              </ul>
+<body data-bs-spy="scroll" data-bs-offset="15" data-bs-target="#myScrollspy">
+  <section>
+    <div id="nav"></div>
+  </section>
+
+  <section id="home">
+    <div class="animate-flicker"><br>Welcome to</br>John Ro's <br>Personal Website</br></div>
+    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    <div id="heart"></div>
+    
+    <div class="intro-block">
+      <div class="monitor">
+        <?xml version="1.0" encoding="utf-8"?>
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 500 200" style="enable-background:new 0 0 500 200;" xml:space="preserve">
+          <g>
+              <polyline class="ekg" points="486.6,113.8 328.2,113.8 310.3,132.3 296,70.7 246.8,127.4 241.6,120.2 233.9,166.4 227,27.6 
+                  213.2,118.3 211.8,112.3 205.1,126.1 198.2,108.5 194.1,124.4 184.5,92.9 174.1,113 4.3,113"/>
+          </g>
+          </svg>
+    <!-- svg provided by Markus Sjero -->
+      </div>
+    </div>
+  </section>
+
+  <section id="me">
+  <div class="container-lg my-2">
+        <h1>About me</h1>
+        <p class="lead"><i>Scroll down to learn more</i></p>
+        <div class="row">
+            <div class="col-sm-3" id="myScrollspy">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-action active" href="#section1">Quick Summary</a>
+                    <a class="list-group-item list-group-item-action" href="#section2">My skills</a>
+                    <a class="list-group-item list-group-item-action" href="#section3">Projects</a>
+                    <a class="list-group-item list-group-item-action" href="#section4">Random Quote</a>
+                    <a class="list-group-item list-group-item-action" href="#section5">My links</a>
+                </div>
+            </div>
+            <div class="col-sm-9">
+          <div id="section1">
+            <h2>Quick Summary</h2>
+            <p>
+              Hello World! My name is John Ro and I'm a software engineer looking to join the field. I graduated from University of Washington with a degree in Psychology with a strong background Science. I enjoy working in the field of medicine but I found myself deeply immersed and passionate about programming that I decided to learn more this field. I realize being a software engineer is the perfect fit for me. So I decided to pursue a degree in Computer Science and Eletrical engineering at Oregon State University.</p>
           </div>
-          <span class="navTrigger">
-              <i></i>
-              <i></i>
-              <i></i>
-          </span>
-</nav>
-<section id="home">
-  <div class="animate-flicker"><br>Welcome to</br>John Ro's <br>Personal Website</br></div>
-  <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-  <div id="heart"></div>
-  
-  <div class="intro-block">
-          <div class="monitor">
-      <?xml version="1.0" encoding="utf-8"?>
-                          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                               viewBox="0 0 500 200" style="enable-background:new 0 0 500 200;" xml:space="preserve">
-                          <g>
-                              <polyline class="ekg" points="486.6,113.8 328.2,113.8 310.3,132.3 296,70.7 246.8,127.4 241.6,120.2 233.9,166.4 227,27.6 
-                                  213.2,118.3 211.8,112.3 205.1,126.1 198.2,108.5 194.1,124.4 184.5,92.9 174.1,113 4.3,113"/>
-                          </g>
-                          </svg>
-  <!-- svg provided by Markus Sjero -->
-      </div>
-  </div>
-</section>
-
-
-
-
-<!-- this is my button modal -->
-<div class="modal-overlay" id="modal-overlay"></div>
-<div class="modal" id="modal">
-   <button class="close-button" id="close-button">Close</button>
-<div class="modal-guts">
-
-
-<!-- This is where my resume start -->
-<div class="resume">
-  <div class="resume_left">
-    <div class="resume_profile">
-      <img src="Img/Profilepic.jpg" alt="profile_pic">
-    </div>
-    <div class="resume_content">
-      <div class="resume_item resume_info">
-        <div class="title">
-          <p class="bold">John Ro</p>
-          <p class="regular">Inspiring Web Developer</p>
-        </div>
-        <ul>
-          <li>
-            <div class="icon">
-              <i class="fas fa-map-signs"></i>
-            </div>
-            <div class="data">
-              Washington,<br /> USA
-            </div>
-          </li>
-          <li>
-            <div class="icon">
-              <i class="fab fa-weebly"></i>
-            </div>
-            <div class="data">
-              https://johnro.dev/
-            </div>
-          </li>
-          <li>
-            <div class="icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="data">
-              <a href="mailto:jmro5991@gmail.com" style="color: whitesmoke">jmro5991@gmail.com</a>
-            </div>
-          </li>
-         
-        </ul>
-      </div>
-      <!-- My skills with logo -->
-      <div class="resume_item resume_skills">
-        <div class="title">
-          <p class="bold">Skills</p>
-        </div>
-        <ul>
-          <li>
-            <div class="skill_name">
-              HTML
-            </div>
-            <div class="skill_image">
-              <i class="fab fa-html5 fa-2x"></i>
-            </div>
-          </li>
-          <li>
-            <div class="skill_name" style="text-align: left;">
-              CSS
-            </div>
-            <div class="skill_image">
-              <i class="fab fa-css3 fa-2x"></i>
-            </div>
-          </li>
-          <li>
-            <div class="skill_name" style="text-align: left;">
-              SASS
-            </div>
-            <div class="skill_image">
-              <i class="fab fa-sass fa-2x"></i>
-          </li>
-          <li>
-            <div class="skill_name" style="text-align: left;" >
-              JS
-            </div>
-            <div class="skill_image">
-              <i class="fab fa-js fa-2x"></i>
-            </div>
-          </li>
-          <li>
-            <div class="skill_name" style="text-align: left;">
-              NODE-JS
-            </div>
-            <div class="skill_image">
-              <i class="fab fa-node fa-2x"></i>
-            </div>
-          </li>
-          <li>
-            <div class="skill_name" style="text-align: left;">
-              React
-            </div>
-            <div class="skill_image">
-              <i class="fab fa-react fa-2x"></i>
-            </div>
-          </li>
-          <li>
-            <div class="skill_name" style="text-align: left;">
-              Adobe PS
-            </div>
-            <div class="skill_image">
-              <i class="fab fa-adobe fa-2x"></i>
-            </div>
-          </li>
-          <li>
-            <div class="skill_name" style="text-align: left;">
-              Python
-            </div>
-            <div class="skill_image">
-              <i class="fab fa-python fa-2x"></i>
-            </div>
-          </li>
-          <li>
-            <div class="skill_name" style="text-align: left;">
-              Django
-            </div>
-            <div class="skill_image">
-              <span class="iconify" data-icon="simple-icons:django" data-inline="false" font-size =30px></span>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!-- Lower left profiles with github/linkedin -->
-      <div class="resume_item resume_social">
-        <div class="title">
-          <p class="bold">My Profiles</p>
-        </div>
-        <ul>
-          <li>
-            <div class="icon">
-              <i class="fab fa-github"></i>
-            </div>
-            <div class="data">
-              <p class="semi-bold">Github</p>
-              <a href="https://github.com/jmr54" target="_blank"><p>jmr54</p></a>
-            </div>
-          </li>
-          <li>
-            <div class="icon">
-              <i class="fab fa-linkedin"></i>
-            </div>
-            <div class="data">
-              <p class="semi-bold">Linkedin</p>
-              <a href ="https://www.linkedin.com/in/john-ro-9625a2212/" target="_blank"><p>John Ro</p></a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
- </div>
- <!-- Start of the next section. "Real resume part" -->
- <div class="resume_right">
-   <div class="resume_item resume_about" style="padding-top: 0px;">
-       <div class="title">
-   </div>
-   <div class="resume_item resume_work">
-       <div class="title">
-          <p class="bold">Work Experience</p>
-        </div>
-       <ul>
-           <li>
-               <div class="date">2016 - 2020</div> 
-               <div class="info">
-                    <p class="semi-bold">Medical Scribe</p> 
-                 <p>
-                  • Document physician-patient encounters (HPI, PE, ROS and A&P). <br>
-                  • Pediatric Gastroenterology, Internal Medicine, Radiology and Obstetrics and Gynecologist. </p>
-               </div>
-           </li>
-           <li>
-             <div class="date">2020 - Present</div>
-             <div class="info">
-                    <p class="semi-bold">EGD Technican</p> 
-                 <p>
-                  • Assist physicians and nurses during procedure.<br>
-                  • Sterilize scope equipment and instrumentation.
+          <hr>
+          <div id="section2">
+            <h2>My Journey</h2>
+            <p>I am currently a student at Oregon State University pursing a degree in
+              Computer Science. I have experience working with Python, Django, Microsoft
+              Macro Assembler, JavaScript, HTML, CSS and React.
+              Outside of my classes I like to work on personal projects to further improve my
+              technical skills. Some of them includes implementing a React front end with a
+              Django back end. I also like working with Python base projects to improve my
+              technical skills in Python.
+              Prior to this degree, I received a degree in Psychology from University of
+              Washington. During that time, I took heavy science classes and have research
+              experience.</p>
+              <h2>My Skills and Technologies</h2>
+              <p>
+                <iconify-icon icon="logos:bootstrap" style="font-size: 50px; margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="vscode-icons:file-type-html" style="font-size: 50px; margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="vscode-icons:file-type-css" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="vscode-icons:file-type-sass" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="vscode-icons:file-type-js-official" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="vscode-icons:file-type-node" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="logos:react" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="vscode-icons:file-type-python" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="flat-color-icons:linux" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="logos:express" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+              </p>
+              <p>
+                <iconify-icon icon="logos:figma" style="font-size: 50px;margin-right: 10px"></iconify-icon>
+                <iconify-icon icon="logos:mysql" style="font-size: 50px;margin-right: 30px;"></iconify-icon>
+                <iconify-icon icon="logos:adobe-photoshop" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="logos:postman-icon" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="logos:jenkins" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="simple-icons:django" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="logos:flask" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="simple-icons:tensorflow" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="uiw:github-o" style="font-size: 50px;margin-right: 15px"></iconify-icon>
+                <iconify-icon icon="vscode-icons:file-type-mongo" style="font-size: 50px;margin-right: 15px"></iconify-icon><iconify-icon icon="vscode-icons:file-type-docker" style="font-size: 50px;"></iconify-icon>
+              </p>
+          </div>
+          <hr>
+          <div id="section3">
+            <h2>List of Projects</h2>
+              <h3>Youtube Mp3/Mp4 Downloader</h3>
+                <p>This project is a Python base project that uses some modules such as Tkinter, Moviepy and Pytube. It contains a GUI that allows users to input the youtube url and some options. It will ask the user to find the directory to save the file to. It also provides an option to download the video in either mp3 format or mp4 format.</p>
+              <h3>Monopoly Backend</h3>
+                <p>
+                  This Python base projects is the logic for a typical Monopoly game. It does not have any GUI and is mostly made for the backend of a monopoloy game. It allows up to 4 players and allows users to add land and the price of each lands. It will keep track of user's 
                 </p>
-               </div>
-           </li>
-       </ul>
-   </div>
-   <div class="resume_item resume_education">
-     <div class="title">
-          <p class="bold">Education</p>
-        </div>
-     <ul>
-           <li>
-               <div class="date">2011-2013</div> 
-               <div class="info">
-                    <p class="semi-bold">Pierce College</p> 
-                 <p>Associates Degree</p>
-               </div>
-           </li>
-           <li>
-             <div class="date">2013 - 2016</div>
-             <div class="info">
-                    <p class="semi-bold">University of Washington</p> 
-                 <p>Bachelors Degree</p>
-               </div>
-           </li>
-       </ul>
-   </div>
-   
-   <div class="resume_item resume_hobby">
-     <div class="title">
-          <p class="bold">Hobby</p>
-        </div>
-      <ul>
-        <li><i class="fas fa-book"></i></li>
-        <li><i class="fas fa-laptop-code"></i></li>
-        <li><i class="fas fa-music"></i></li>
-        <li><i class="fas fa-golf-ball"></i></li>
-     </ul>
-       <ul>
-        <li><i class="fas fa-hockey-puck"></i></li>
-        <li><i class="fas fa-football-ball"></i></li>
-        <li><i class="fas fa-chess-king"></i></li>
-        <li><i class="fas fa-passport"></i></li>
-     </ul>
-   </div>
-
-   <div class="resume-language">
-    <div class="title">
-      <p class="bold">Languages</p>
-      <ul>
-        <li>
-            <p class="semi-bold">English</p> 
-        </li>
-
-          <li>
-              <p class="semi-bold">Korean</p> 
-          </li>
-          <li>
-            <p class="semi-bold">American Sign Language</p> 
-        </li>
-    </ul>
-    </div>
-   </div>
- </div>
- </div>
-
-</div>
-</div>
-</div>
-</div>
- 
-<!-- (╯°□°）╯︵ ┻━┻ -->
-
-
-<!-- <section id="about">
- <div class="about-me">
-   <img src="Img/Profilepic.jpg" class="about-me-pic">
-   Photo by ᴊᴀᴄʜʏᴍ ᴍɪᴄʜᴀʟ https://unsplash.com/@jachymmichal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText Unsplash 
-    
-   <div class="about-me-text">
-     <h1>About me</h1>
-     <p>Hello World! My name is John Ro and I'm a software engineer looking to join the field. I graduated from University of Washington with a strong background in Psychology and Science. I enjoy working in the field of medicine but I found myself deeply immersed and passionate about programming that I decided to learn more this field. </p>
-     <p>I enjoy many various hobbies that includes many activities. Sport wise, I enjoy American football, ice hockey, golf and football (soccer). I played sports since I was a kid so I know the importance of teamwork and communication.  I also enjoy playing chess, reading and watching movies in my spare time as well. </p>
-     <p>Quotes to live by</p>
-     <p>“Do more than is required. What is the distance between someone who achieves their goals consistently and those who spend their lives and careers merely following? The extra mile.”
-      ~ Gary Ryan Blair</p>
-      <p>“Success seems to be connected with action. Successful people keep moving. They make mistakes, but they don’t quit.”
-        ~ Conrad Hilton</p>
-        <div class="wrapper">
-          <div class="icon instagram">
-            <div class="tooltip">Email</div>
-            <a href = "mailto: jmro5991@gmail.com"><span><i class="fas fa-envelope-open"></i></span></a>
+              <h3>Exercise Tracker</h3>
+                <p>This project is a full stack/MERN developement. It allows user to track their workout history. It provides the user to add title, reps, weight or units. Then users can edit or delete the added exercise as well. Its a good way to keep track of your daily exercise.</p>
+              <h3>Symptom Tracker</h3>
+                <p>This is a full stack projects that uses React as a front end and a flask back end. It has a page where it connects to a API that stores articles about certain symptoms. It allows users to find article that contains informations about their symptoms. It then also has another page that allows users to keep track of their symptoms like a diary. It has an option to add the symptom, the date and a descriptions about their symptoms.</p>
+              
           </div>
-          <div class="icon github">
-            <div class="tooltip">Github</div>
-            <a href = "https://github.com/jmr54" target="_blank"><span><i class="fab fa-github"></i></span></a>
-          </div>
-          <div class="icon linkedin">
-            <div class="tooltip">Linkedin</div>
-            <a href = "https://www.linkedin.com/in/john-ro-9625a2212/" target="_blank"><span><i class="fab fa-linkedin"></i></span></a>
-          </div>
-        </div>
-    </div>
-    
- </div>
-<p>I enjoy many various hobbies that includes many activities. Sport wise, I enjoy American football, ice hockey, golf and football (soccer). I played sports since I was a kid so I know the importance of teamwork and communication.  I also enjoy playing chess, reading and watching movies in my spare time as well. </p>
-</section> -->
-
-
-<section id="about">
-  <div class="about-me">
-    <img src="Img/Profilepic.jpg" class="about-me-pic">
-
-    <article class="about-me-text">
-    <!-- This is where we store the title of the tabs -->
-    <div class="btn-container">
-      <button class="tab-btn active" data-id="biography">About Me</button>
-      <button class="tab-btn" data-id="projects">Projects</button>
-      <button class="tab-btn" data-id="quotes">Quotes</button>
-    </div>
-    <div class="about-content">
-      <!-- This is where we place more information about our tabs -->
-      <div class="content active" id="biography">
-        <p>Hello World! My name is John Ro and I'm a software engineer looking to join the field. I graduated from University of Washington with a strong background in Psychology and Science. I enjoy working in the field of medicine but I found myself deeply immersed and passionate about programming that I decided to learn more this field. </p>
-        <div class="wrapper">
-          <div class="icon instagram">
-            <div class="tooltip">Email</div>
-            <a href = "mailto: jmro5991@gmail.com"><span><i class="fas fa-envelope-open"></i></span></a>
-          </div>
-          <div class="icon github">
-            <div class="tooltip">Github</div>
-            <a href = "https://github.com/jmr54" target="_blank"><span><i class="fab fa-github"></i></span></a>
-          </div>
-          <div class="icon linkedin">
-            <div class="tooltip">Linkedin</div>
-            <a href = "https://www.linkedin.com/in/john-ro-9625a2212/" target="_blank"><span><i class="fab fa-linkedin"></i></span></a>
-          </div>
-        </div>
-      </div>
-      <!-- end of history tab -->
-      <!-- start of projects tab-->
-      <div class="content" id="projects">
-        <h4>Check them out</h4>
-        <p>
-          Coming Soon
-        </p>
-      </div>
-      <!-- end of projects tab -->
-      <!-- start of goals tab -->
-      <div class="content" id="quotes">
-        <h4>Random Quotes</h4>
-        <div class= "fancy_border">   
-          <div class ="main_border">
+          <hr>
+          <div id="section4">
+            <h2>Get a Random Quote</h2>
             <p id="quote_page">
-            </p>
-            <button id="quote_btn">Click For A New Quote!</div>
           </div>
-  
-      </div>
-      <!-- end of goal tabs-->
-    </div>
-  </article>
-</div>
-</div>
-
-<!-- CodePen Home
-Gallery Viewer Carousel / Tiles
-Chris Rowland -->
-<section id="gallary">
-  <div id="container">
-    <div id="toggleContainer">
-       <label>Carousel</label>
-       <div id="toggle">
-         <div id="outer3">
-            <div id="slider3"></div>
-         </div>
-         <label>Tiles</label>
-      </div>
-    </div>
-    <div id="galleryView">
-      <div id="galleryContainer">
-         <div id="leftView"></div>
-         <button id="navLeft" class="navBtns"><i class="fas fa-arrow-left fa-3x"></i></button>
-         <a id="linkTag">
-            <div id="mainView"></div>
-         </a>
-         <div id="rightView"></div>
-         <button id="navRight" class="navBtns"><i class="fas fa-arrow-right fa-3x"></i></button>
-      </div>
-    </div>
-    <div id="tilesView">
-      <div id="tilesContainer"></div>
-    </div>
+          <hr>
+          <div id="section5">
+            <h2>Contact Me!</h2>
+            <div>
+              <p>Check out my social media from below and feel free to contact me! </p>
+              <div class="wrapper">
+                <div class="icon instagram">
+                  <div class="tooltip">Email</div>
+                  <a href = "mailto: jmro5991@gmail.com"><span><i class="fas fa-envelope-open"></i></span></a>
+                </div>
+                <div class="icon github">
+                  <div class="tooltip">Github</div>
+                  <a href = "https://github.com/jmr54" target="_blank"><span><i class="fab fa-github"></i></span></a>
+                </div>
+                <div class="icon linkedin">
+                  <div class="tooltip">Linkedin</div>
+                  <a href = "https://www.linkedin.com/in/john-ro-9625a2212/" target="_blank"><span><i class="fab fa-linkedin"></i></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
   </div>
-</section>
+  </section>
 
+  <!-- (╯°□°）╯︵ ┻━┻ -->
 
-
-
+  <section id="gallery">
+    <h1>My Gallery</h1>
+    <div id ="image"></div>
+  </section>
 
     <!-- javascript -->
     <script type='text/javascript' src='config.js'></script>
@@ -438,6 +160,14 @@ Chris Rowland -->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!--React components scripts-->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Load our React component. -->
+    <script src="./Images.js" type="text/babel"></script>
+    <script src="./Navbar.js" type="text/babel"></script>
 </body>
 </html>
 
